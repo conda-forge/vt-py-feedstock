@@ -1,5 +1,5 @@
 {% set name = "vt-py" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/vt-py-{{ version }}.tar.gz
-  sha256: b1c9ed7e1111537ff3aa407c6e8b97f2743996756b322614006d0006b852e6bf
+  sha256: 2c3ed29516c796c4bbafd000aa1d121c9f23e70110db177d1d9bafbf157ec229
 
 build:
   number: 0
