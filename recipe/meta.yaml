@@ -1,5 +1,5 @@
 {% set name = "vt-py" %}
-{% set version = "0.18.4" %}
+{% set version = "0.19.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 4ec89365d4da4d70b5be5c6bc7baa3fa12037065ef22de3eb4210d1957d31aa9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 32e85a835e79b6ddf60165f71292e98fe6c078b5c960ca4c4335e692d7856c09
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
     - pytest-runner
     - python >=3.6
   run:
+    - aiofiles
     - aiohttp ==3.8.6
     - python >=3.6
 
