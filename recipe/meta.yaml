@@ -11,7 +11,7 @@ source:
   sha256: 32e85a835e79b6ddf60165f71292e98fe6c078b5c960ca4c4335e692d7856c09
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,11 +19,11 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - aiofiles
     - aiohttp ==3.8.6
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://www.virustotal.com/gui/
