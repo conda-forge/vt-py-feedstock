@@ -1,5 +1,5 @@
 {% set name = "vt-py" %}
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: f0260036e4f483471776dece6275373d98288435c839b562ba47902399eca1cc
+  sha256: 1934c15a3ec3c410909f9e8c8442264c92af3bfae8e53ba1e808cbe2f4a23caa
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - python {{ python_min }}
   run:
     - aiofiles
-    - aiohttp ==3.8.6
+    - aiohttp
     - python >={{ python_min }}
 
 test:
